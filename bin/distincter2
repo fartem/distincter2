@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'distincter2'
+
+distincter2 = ::Distincter2::Distincter2.new
+distincter2.start(::ARGV[0])
