@@ -13,3 +13,6 @@ Style/Copyright:
 
 Bundler/GemComment:
   Enabled: false
+
+Style/DisableCopsWithinSourceCodeDirective:
+  Enabled: false
