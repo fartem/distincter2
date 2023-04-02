@@ -17,11 +17,11 @@ module Distincter2
 
         file = "#{::File.absolute_path(path)}/#{::File.basename(entry)}"
         if ::File.directory?(file)
-          analyze_dir(file)
+          duplicates << analyze_dir(file)
         else
           next unless entry.end_with?('.md')
 
-          analyze_file(file)
+          duplicates << analyze_file(file)
         end
       end
       duplicates
@@ -43,6 +43,7 @@ module Distincter2
         output = "#{path} : #{duplicate}"
         puts(output)
       end
+      duplicates
     end
     # rubocop:enable Metrics/MethodLength
   end
