@@ -1,5 +1,7 @@
-require_relative '../lib/distincter2/checker.rb'
+require 'simplecov'            # These two lines must go first
+SimpleCov.start
 
+require_relative '../lib/distincter2/checker.rb'
 require 'minitest/autorun'
 
 class D2CheckerTest < Minitest::Test

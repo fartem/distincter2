@@ -8,6 +8,7 @@ on:
 
 jobs:
   checks:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -19,3 +20,8 @@ jobs:
       run: bundle install
     - name: Run checks 
       run: bundle exec rake
+    - name: Simplecov Report
+      uses: aki77/simplecov-report-action@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        failedThreshold: 50
