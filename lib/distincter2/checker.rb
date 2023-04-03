@@ -31,6 +31,7 @@ module Distincter2
       end
       duplicates
     end
+
     # rubocop:enable Metrics/MethodLength
 
     # Analyze given file.
@@ -51,6 +52,7 @@ module Distincter2
       end
       duplicates
     end
+
     # rubocop:enable Metrics/MethodLength
   end
 end
