@@ -2,6 +2,11 @@ module Distincter2
   # disctinter2 checker.
   # Handles a file and operate them.
   class D2Checker
+    # Mute if you don't want to see errors in output
+    def initialize(mute = false)
+      @mute = mute
+    end
+
     # Check entrypoint.
     def check(path)
       duplicates = analyze_dir(path)
@@ -39,10 +44,7 @@ module Distincter2
       end
       duplicates = lines.select { |line| lines.count(line) > 1 }
                         .uniq
-      duplicates.each do |duplicate|
-        output = "#{path} : #{duplicate}"
-        puts(output)
-      end
+      duplicates.each { |duplicate| puts("#{path} : #{duplicate}") } unless @mute
       duplicates
     end
     # rubocop:enable Metrics/MethodLength

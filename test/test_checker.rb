@@ -13,7 +13,7 @@ class D2CheckerTest < Minitest::Test
   end
 
   def test_invalid_file
-    checker = ::Distincter2::D2Checker.new
+    checker = ::Distincter2::D2Checker.new(mute: true)
     duplicates = checker.analyze_file("#{Dir.pwd}/test_assets/invalid_list.md")
 
     assert !duplicates.empty?
