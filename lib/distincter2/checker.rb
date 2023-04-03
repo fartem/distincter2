@@ -1,5 +1,5 @@
 module Distincter2
-  # disctinter2 checker.
+  # distincter2 checker.
   # Handles a file and operate them.
   class D2Checker
     # Mute if you don't want to see errors in output
@@ -13,7 +13,7 @@ module Distincter2
       exit(duplicates.empty? ? 0 : 1)
     end
 
-    # Analyze given directory with resursion.
+    # Analyze given directory with recursion.
     # rubocop:disable Metrics/MethodLength
     def analyze_dir(path)
       duplicates = []
