@@ -1,5 +1,10 @@
 # distincter2
 
+[![GitHubActions](https://github.com/fartem/distincter2/workflows/Build/badge.svg)](https://github.com/fartem/distincter2/actions?branch=master)
+[![Gem Version](https://badge.fury.io/rb/distincter2.svg)](https://badge.fury.io/rb/distincter2)
+
+## About
+
 A tool that can check lists in Markdown files and find duplicates.
 
 ## How to use
