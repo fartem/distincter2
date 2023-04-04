@@ -21,13 +21,15 @@ module Distincter2
         next if entry.start_with?('.')
 
         file = "#{::File.absolute_path(path)}/#{::File.basename(entry)}"
+        analyze_result = []
         if ::File.directory?(file)
-          duplicates << analyze_dir(file)
+          analyze_result = analyze_dir(file)
         else
           next unless entry.end_with?('.md')
 
-          duplicates << analyze_file(file)
+          analyze_result = analyze_file(file)
         end
+        duplicates += analyze_result unless analyze_result.empty?
       end
       duplicates
     end
