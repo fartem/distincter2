@@ -1,6 +1,17 @@
 #!/usr/bin/env ruby
 
 require 'distincter2'
+require 'colorize'
 
-distincter2 = ::Distincter2::Distincter2.new
-distincter2.start(::ARGV[0])
+# @param text String
+def red_colored_text(text)
+  text.colorize(:light_red)
+end
+
+if ::ARGV.empty?
+  puts red_colored_text('ERROR: You need to provide a path to directory with files.').to_s
+  exit(1)
+else
+  distincter2 = ::Distincter2::Distincter2.new
+  distincter2.start(::ARGV[0])
+end
