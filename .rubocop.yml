@@ -7,7 +7,6 @@ AllCops:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
-
 Style/Copyright:
   Enabled: false
 
