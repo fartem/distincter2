@@ -5,8 +5,6 @@ AllCops:
   Exclude:
     - 'test/**/test_*.rb'
 
-Style/FrozenStringLiteralComment:
-  Enabled: false
 Style/Copyright:
   Enabled: false
 

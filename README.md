@@ -23,6 +23,15 @@ $ distincter2 ./path_to_directory_with_markdown_files
 $ ./bin/local_distincter2 ./path_to_directory_with_markdown_files
 ```
 
+### Config
+
+Add `distincter2_config.d2c` to root of your project and add excluded files line by line:
+
+```text
+BOOKS.md
+DONE.md
+```
+
 ## Contributors
 
 * [@fartem](https://github.com/fartem) as Artem Fomchenkov
