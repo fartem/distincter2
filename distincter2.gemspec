@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'English'
 
 ::Gem::Specification.new do |s|
   s.required_ruby_version = '>= 3.0'
   s.name = 'distincter2'
-  s.version = '1.2.0'
+  s.version = '1.3.0'
   s.license = 'MIT'
   s.files = ::Dir['lib/**/*.rb'] + %w[bin/distincter2 README.md LICENSE]
   s.executable = 'distincter2'
