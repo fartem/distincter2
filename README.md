@@ -25,7 +25,22 @@ $ ./bin/local_distincter2 ./path_to_directory_with_markdown_files
 
 ### Config
 
-Add `distincter2_config.d2c` to root of your project and add excluded files line by line:
+Add `distincter2_config.d2c` to root of your project and add excluded files line by line. Below you can find examples.
+
+#### v1
+
+Provides basic list for excluding files by names (without directories).
+
+Add `v1`:
+
+```text
+v1
+
+BOOKS.md
+DONE.md
+```
+
+Or without `v1`:
 
 ```text
 BOOKS.md

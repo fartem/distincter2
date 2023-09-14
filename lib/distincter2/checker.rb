@@ -34,7 +34,7 @@ module Distincter2
         else
           next unless entry.end_with?('.md')
 
-          next if @config.exclude_paths.include?(entry_name)
+          next unless can_analyze(entry_name)
 
           analyze_result = analyze_file(file)
         end
@@ -46,6 +46,13 @@ module Distincter2
     end
 
     # rubocop:enable Metrics/MethodLength
+
+    # @param {String} entry
+    def can_analyze(entry)
+      return false unless @config.version == 'v1'
+
+      @config.exclude_paths.none?(entry)
+    end
 
     # @param {String} path
     # @return {String[]}
