@@ -5,11 +5,13 @@ AllCops:
   Exclude:
     - 'test/**/test_*.rb'
 
-Style/Copyright:
+Metrics/MethodLength:
   Enabled: false
 
 Bundler/GemComment:
   Enabled: false
 
 Style/DisableCopsWithinSourceCodeDirective:
+  Enabled: false
+Style/Copyright:
   Enabled: false
