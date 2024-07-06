@@ -47,6 +47,27 @@ BOOKS.md
 DONE.md
 ```
 
+## How to contribute
+
+### Documentation
+
+Just run:
+
+```shell
+$ rdoc
+```
+
+### Contribution
+
+Read [Commit Convention](./COMMIT_CONVENTION.md). Make sure your build is green before you contribute your pull request.
+Then:
+
+```shell
+$ bundle exec rake
+```
+
+If you don't see any error messages, submit your pull request.
+
 ## Contributors
 
 * [@fartem](https://github.com/fartem) as Artem Fomchenkov

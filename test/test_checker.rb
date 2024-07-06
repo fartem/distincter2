@@ -8,14 +8,14 @@ require 'minitest/autorun'
 
 class D2CheckerTest < Minitest::Test
   def test_valid_file
-    checker = ::Distincter2::D2Checker.new(::Distincter2::D2ConfigEmpty.new)
+    checker = ::Distincter2::D2Checker.new(::Distincter2::D2EmptyConfig.new)
     duplicates = checker.analyze_file("#{Dir.pwd}/test_assets/valid/valid_list.md")
 
     assert duplicates.empty?
   end
 
   def test_invalid_file
-    checker = ::Distincter2::D2Checker.new(::Distincter2::D2ConfigEmpty.new)
+    checker = ::Distincter2::D2Checker.new(::Distincter2::D2EmptyConfig.new)
     duplicates = checker.analyze_file("#{Dir.pwd}/test_assets/invalid/invalid_list.md")
 
     assert !duplicates.empty?
@@ -33,7 +33,7 @@ class D2CheckerTest < Minitest::Test
 
   def test_checker_with_inner_dirs
     path = "#{Dir.pwd}/test_assets/dirs"
-    checker = ::Distincter2::D2Checker.new(::Distincter2::D2ConfigEmpty.new)
+    checker = ::Distincter2::D2Checker.new(::Distincter2::D2EmptyConfig.new)
     duplicates = checker.analyze_dir(path)
 
     assert duplicates.empty?
