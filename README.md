@@ -10,22 +10,20 @@ A tool that can check lists in Markdown files and find duplicates.
 
 ## How to use
 
-### Global installation
+You need to install `distincter2` from [RubyGems](https://rubygems.org/gems/distincter2) by next command:
 
 ```shell
 $ gem i distincter2
-$ distincter2 ./path_to_directory_with_markdown_files
 ```
-
-### Local installation
+After that, run `distincter2` from any place with a path to your markdown files as parameter:
 
 ```shell
-$ ./bin/local_distincter2 ./path_to_directory_with_markdown_files
+$ distincter2 ./path_to_directory_with_markdown_files
 ```
 
 ### Config
 
-Add `distincter2_config.d2c` to root of your project and add excluded files line by line. Below you can find examples.
+Add `.d2_config.d2c` to root of your project and add excluded files line by line. Below you can find examples.
 
 #### v1
 
@@ -47,17 +45,15 @@ BOOKS.md
 DONE.md
 ```
 
-## How to contribute
+## Documentation
 
-### Documentation
-
-Just run:
+You can generate documentation locally by next command from root of the project:
 
 ```shell
 $ rdoc
 ```
 
-### Contribution
+## How to contribute
 
 Read [Commit Convention](./COMMIT_CONVENTION.md). Make sure your build is green before you contribute your pull request.
 Then:

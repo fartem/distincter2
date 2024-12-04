@@ -24,7 +24,7 @@ class D2CheckerTest < Minitest::Test
   def test_checker_with_config
     path = "#{Dir.pwd}/test_assets/config"
     checker = ::Distincter2::D2Checker.new(
-      ::Distincter2::D2ConfigParser.new("#{path}/distincter2_config.d2c").parse,
+      ::Distincter2::D2ConfigParser.new("#{path}/.d2_config.d2c").parse,
     )
     duplicates = checker.analyze_dir(path)
 
