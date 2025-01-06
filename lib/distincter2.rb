@@ -19,8 +19,16 @@ module Distincter2
     #   # Start the validation process for a project located at '/path/to/project'
     #   distincter.start('/path/to/project')
     def start(path)
-      # Construct the path to the distincter2_config.d2c file
-      config_path = "#{path}/distincter2_config.d2c"
+      # Construct the path to the .d2_config.d2c file
+      new_config_path = "#{path}/.d2_config.d2c"
+      old_config_path =
+        if ::File.exist?(new_config_path)
+          nil
+        else
+          "#{path}/distincter2_config.d2c"
+        end
+
+      config_path = old_config_path.nil? ? new_config_path : old_config_path
 
       # Create a new D2Checker instance with the appropriate configuration
       checker = ::Distincter2::D2Checker.new(
